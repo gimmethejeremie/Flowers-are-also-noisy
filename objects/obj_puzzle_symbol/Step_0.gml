@@ -44,6 +44,10 @@ if (_im.p1_interact_pressed) {
             global.puzzle_solved_3 = true;
             global.puzzles_solved++;
         }
+
+        global.pending_wall_open = true;
+        global.pending_wall_x = global.return_x;
+        global.pending_wall_y = global.return_y;
         global.pending_dialogue_id = "zone3_solved";
         room_goto(rm_main);
     }

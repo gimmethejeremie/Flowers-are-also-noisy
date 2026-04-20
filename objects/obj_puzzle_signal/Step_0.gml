@@ -34,15 +34,15 @@ if (phase == 0) {
         if (show_index < array_length(correct_seq)) {
             // Hiện tín hiệu hiện tại
             switch (correct_seq[show_index]) {
-                case 1: current_hint = "← TRÁI";  break;
-                case 2: current_hint = "→ PHẢI"; break;
-                case 3: current_hint = "↑ LÊN";   break;
-                case 4: current_hint = "↓ XUỐNG"; break;
+                case 1: current_hint = "<- LEFT";  break;
+                case 2: current_hint = "-> RIGHT"; break;
+                case 3: current_hint = "^ UP";     break;
+                case 4: current_hint = "v DOWN";   break;
             }
             show_index++;
         } else {
             // Phát xong → chuyển sang phase nhập
-            current_hint = "Nhập lại!";
+            current_hint = "Repeat it!";
             show_index   = 0;
             phase        = 1;
         }
@@ -68,7 +68,7 @@ if (phase == 1) {
             player_seq   = [];
             phase        = 0;
             show_index   = 0;
-            current_hint = "Sai! Phát lại...";
+            current_hint = "Wrong! Replaying...";
         } else if (array_length(player_seq) == array_length(correct_seq)) {
             // Đúng hết → solved
             solved       = true;
@@ -77,6 +77,10 @@ if (phase == 1) {
                 global.puzzle_solved_1 = true;
                 global.puzzles_solved++;
             }
+
+            global.pending_wall_open = true;
+            global.pending_wall_x = global.return_x;
+            global.pending_wall_y = global.return_y;
             room_goto(rm_main);
         }
     }

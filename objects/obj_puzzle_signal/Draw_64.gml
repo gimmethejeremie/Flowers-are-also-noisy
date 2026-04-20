@@ -15,10 +15,10 @@ draw_text(_sw * 0.5 - 140, 80, "PUZZLE ROOM 1: SIGNAL");
 
 draw_set_colour(c_yellow);
 draw_text(_sw * 0.5 - 120, 160, "Phase: " + string(phase));
-draw_text(_sw * 0.5 - 120, 190, "Gợi ý: " + current_hint);
+draw_text(_sw * 0.5 - 120, 190, "Hint: " + current_hint);
 
 if (phase == 1) {
     draw_set_colour(c_white);
-    draw_text(_sw * 0.5 - 160, 240, "Dùng mũi tên ←↑→↓ để nhập lại chuỗi");
-    draw_text(_sw * 0.5 - 160, 270, "Đã nhập: " + string(array_length(player_seq)) + " / " + string(array_length(correct_seq)));
+    draw_text(_sw * 0.5 - 160, 240, "Use arrow keys LEFT/UP/RIGHT/DOWN to repeat the sequence");
+    draw_text(_sw * 0.5 - 160, 270, "Entered: " + string(array_length(player_seq)) + " / " + string(array_length(correct_seq)));
 }

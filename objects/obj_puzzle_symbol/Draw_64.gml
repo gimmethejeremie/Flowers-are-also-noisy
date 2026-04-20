@@ -12,6 +12,6 @@ draw_set_alpha(1);
 
 draw_set_colour(c_white);
 draw_text(_sw * 0.5 - 130, 80, "PUZZLE ROOM 3: SYMBOL");
-draw_text(_sw * 0.5 - 170, 180, "Chọn ký hiệu bằng ← →, nhấn E để xác nhận");
-draw_text(_sw * 0.5 - 120, 230, "Đang chọn: " + available_syms[selected_index]);
-draw_text(_sw * 0.5 - 120, 260, "Tiến độ: " + string(array_length(player_input)) + " / 4");
+draw_text(_sw * 0.5 - 170, 180, "Choose a symbol with LEFT/RIGHT, press E to confirm");
+draw_text(_sw * 0.5 - 120, 230, "Current: " + available_syms[selected_index]);
+draw_text(_sw * 0.5 - 120, 260, "Progress: " + string(array_length(player_input)) + " / 4");

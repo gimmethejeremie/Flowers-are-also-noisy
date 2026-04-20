@@ -1,4 +1,16 @@
-var _required = global.current_zone;
+// Mỗi transition tự lấy thứ tự từ trái sang phải trong rm_main:
+// transition đầu cần 1 puzzle, transition thứ 2 cần 2 puzzle, ...
+var _required = 1;
+var _n = instance_number(obj_zone_transition);
+for (var _i = 0; _i < _n; _i++) {
+    var _tr = instance_find(obj_zone_transition, _i);
+    if (_tr != id) {
+        if (_tr.x < x || (_tr.x == x && _tr.id < id)) {
+            _required += 1;
+        }
+    }
+}
+
 var _can_open = (global.puzzles_solved >= _required);
 
 if (!wall_open && _can_open) {
@@ -29,7 +41,7 @@ if (!triggered && _touching) {
         is_panning = true;
         obj_p1.movement_locked = true;
         obj_camera_ctrl.locked = true;  // thêm dòng này
-        global.current_zone++;
+        global.current_zone = max(global.current_zone, _required + 1);
     }
 } else if (!_touching) {
     warned_locked = false;
