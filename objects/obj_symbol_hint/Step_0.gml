@@ -1,0 +1,1 @@
+visible_to_p1 = is_in_light(x, y);

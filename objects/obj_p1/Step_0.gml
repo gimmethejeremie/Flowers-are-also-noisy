@@ -2,19 +2,17 @@ var _im = obj_input_manager;
 
 // Bị bắt
 if (captured) {
-    if (is_in_light(x, y)) {
-        captured = false;
-        if (!rescued_dialogue_played) {
-            obj_dialogue_manager.queue_dialogue("zone2_p1_caught");
-            rescued_dialogue_played = true;
-        }
-    } else {
-        capture_timer--;
-        if (capture_timer <= 0) {
-            x = global.p1_checkpoint_x[global.current_zone];
-            y = global.p1_checkpoint_y[global.current_zone];
-            captured = false;
-        }
+    // Chờ dialogue chạy xong
+    if (obj_dialogue_box.is_running) { exit; }
+
+    // Đếm ngược
+    capture_timer--;
+    if (capture_timer <= 0) {
+        x               = global.p1_checkpoint_x[global.current_zone];
+        y               = global.p1_checkpoint_y[global.current_zone];
+        captured        = false;
+        movement_locked = false;
+        capture_timer   = 180; // reset cho lần sau
     }
     exit;
 }

@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_puzzle_signal",
+  "%Name":"obj_puzzle_slot",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_puzzle_signal",
+  "name":"obj_puzzle_slot",
   "overriddenProperties":[],
   "parent":{
     "name":"Object",
@@ -31,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_shadow",
+    "path":"sprites/spr_shadow/spr_shadow.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
