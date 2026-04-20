@@ -45,6 +45,8 @@
     {"id":{"name":"obj_zone_transition","path":"objects/obj_zone_transition/obj_zone_transition.yy",},},
     {"id":{"name":"obj_zone_trigger","path":"objects/obj_zone_trigger/obj_zone_trigger.yy",},},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
+    {"id":{"name":"rm_puzzle_1","path":"rooms/rm_puzzle_1/rm_puzzle_1.yy",},},
+    {"id":{"name":"rm_puzzle_3","path":"rooms/rm_puzzle_3/rm_puzzle_3.yy",},},
     {"id":{"name":"scr_globals","path":"scripts/scr_globals/scr_globals.yy",},},
     {"id":{"name":"spr_battle_screen","path":"sprites/spr_battle_screen/spr_battle_screen.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
@@ -75,6 +77,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
+    {"roomId":{"name":"rm_puzzle_1","path":"rooms/rm_puzzle_1/rm_puzzle_1.yy",},},
+    {"roomId":{"name":"rm_puzzle_3","path":"rooms/rm_puzzle_3/rm_puzzle_3.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

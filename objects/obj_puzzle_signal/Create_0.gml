@@ -1,6 +1,6 @@
 puzzle_id    = 1;
 active       = false;
-solved       = false;
+solved       = global.puzzle_solved_1;
 correct_seq  = [2, 4, 1, 3, 2]; // 1=Trái 2=Phải 3=Lên 4=Xuống
 player_seq   = [];
 show_index   = 0;

@@ -1,5 +1,7 @@
 var _lit = is_in_light(x, y);
 
+if (global.in_puzzle_room) exit;
+
 switch (state) {
     case MSTATE.SLEEP:
         if (point_distance(x, y, obj_p1.x, obj_p1.y) < detect_r && !_lit)

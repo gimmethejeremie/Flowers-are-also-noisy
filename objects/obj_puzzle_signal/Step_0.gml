@@ -1,5 +1,25 @@
 if (solved) exit;
 
+var _rm_puzzle_1 = asset_get_index("rm_puzzle_1");
+
+if (room == rm_main) {
+    if (instance_exists(obj_p1)) {
+        var _near = point_distance(x, y, obj_p1.x, obj_p1.y) <= 28;
+        if (_near) {
+            global.return_x = obj_p1.x;
+            global.return_y = obj_p1.y;
+            global.return_from_puzzle = true;
+            room_goto(_rm_puzzle_1);
+            exit;
+        }
+    }
+    exit;
+}
+
+if (room != _rm_puzzle_1) exit;
+
+active = true;
+
 // Kích hoạt khi P2 chiếu đèn vào
 if (!active) {
     if (is_in_light(x, y)) active = true;
@@ -53,18 +73,11 @@ if (phase == 1) {
             // Đúng hết → solved
             solved       = true;
             current_hint = "SOLVED!";
-            obj_game_manager.puzzles_solved++;
+            if (!global.puzzle_solved_1) {
+                global.puzzle_solved_1 = true;
+                global.puzzles_solved++;
+            }
+            room_goto(rm_main);
         }
-    }
-}
-
-if (array_length(player_seq) == array_length(correct_seq)) {
-    solved       = true;
-    current_hint = "SOLVED!";
-    obj_game_manager.puzzles_solved++;
-    
-    // Xóa tường chặn
-    with (obj_wall) {
-        if (x > 1100 && x < 1200) instance_destroy(); // chỉnh tọa độ theo room
     }
 }

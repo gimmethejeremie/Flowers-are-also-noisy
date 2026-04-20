@@ -30,7 +30,7 @@ var _target = 0.88;
 switch (global.current_zone) {
     case 1: _target = 0.88; break;
     case 2: _target = 0.94; break;
-    case 3: _target = lerp(0.91, 0, obj_game_manager.puzzles_solved / 3); break;
+    case 3: _target = lerp(0.91, 0, global.puzzles_solved / 3); break;
 }
 darkness_alpha = lerp(darkness_alpha, _target, 0.02);
 draw_surface_ext(surf, 0, 0, 1, 1, 0, c_black, darkness_alpha);
