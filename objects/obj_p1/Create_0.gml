@@ -1,0 +1,9 @@
+spd             = 2.5;
+held_item       = "";
+captured        = false;
+capture_timer   = 0;
+movement_locked = false;
+auto_walking    = false;
+auto_walk_target_x = 0;
+auto_walk_target_y = 0;
+rescued_dialogue_played = false;

@@ -1,0 +1,9 @@
+state          = MSTATE.SLEEP;
+spd            = 1.5;       // override khi đặt vào room
+detect_r       = 140;
+wake_timer_max = 60;
+wake_timer     = wake_timer_max;
+stun_timer     = 0;
+freeze_lerp    = 0;
+start_x        = x;
+start_y        = y;
